@@ -1,0 +1,47 @@
+﻿@model IEnumerable<FriendApp.Models.Friend>
+@{
+}
+    <style type="text/css">
+        table {
+            border: ridge 5px red;
+            background-color: papayawhip;
+            color: red;
+        }
+
+            table td {
+                border: inset 1px #000;
+            }
+            h1 {
+                color: black;
+            }
+    </style>
+<body style="float: left; width: 280px; background-color:lightblue;">
+
+<h1>F.R.I.E.N.D.S</h1>
+
+<div class="Friend">
+    <table border="1">
+        <tr>
+            <th>FriendId</th>
+            <th>FriendName</th>
+            <th>Place</th>
+        </tr>
+
+        @foreach (var friend in Model)
+        {
+            <tr>
+                <td>@friend.FriendId</td>
+
+                <td>@friend.FriendName</td>
+
+                <td>@friend.Place</td>
+            </tr>
+
+
+        }
+
+    </table>
+   
+
+</div>
+</body>

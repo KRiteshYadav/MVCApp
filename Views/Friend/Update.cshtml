@@ -1,0 +1,40 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model FriendApp.Models.Friend
+
+
+
+<body style="float: left; width: 280px; background-color:lightblue;">
+    <fieldset>
+        <h1>Update a Friend record </h1>
+
+        <form asp-action="Update" asp-controller="Friend">
+
+            <div asp-validation-summary="ModelOnly" class="input-validation-error"></div>
+
+
+            <p>
+                <b><label asp-for="FriendId"></label></b>
+                <input asp-for="FriendId" class="form-control" placeholder="" />
+                <span asp-validation-for="FriendId"></span>
+            </p>
+
+            <p>
+                <b><label asp-for="FriendName"></label></b>
+                <input asp-for="FriendName" class="form-control" placeholder="">
+                <span asp-validation-for="FriendName"></span>
+            </p>
+            <p>
+                <b><label asp-for="Place"></label></b>
+                <input asp-for="Place" class="form-control" placeholder="">
+                <span asp-validation-for="Place"></span>
+            </p>
+
+            <p>
+                <button type="submit">Update</button>
+                <button type="reset">Back</button>
+            </p>
+
+        </form>
+
+    </fieldset>
+</body>
